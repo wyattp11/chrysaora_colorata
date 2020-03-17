@@ -19,7 +19,11 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/light-v10',
-            center: [-122, 36.6]
+            center: [-122, 36.6],
+            maxBounds: [
+                [-132, 51], // Southwest coordinates
+                [-100, 20] // Northeast coordinates
+            ]
         });
     </script>
 </body>
@@ -35,6 +39,7 @@
 
     #map {
         position: absolute;
+        visibility: visible;
         top: 0;
         bottom: 0;
         width: 100%;
