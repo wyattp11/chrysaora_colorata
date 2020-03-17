@@ -13,22 +13,31 @@
 
 <body>
     <div id='map'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoid3lhdHRwIiwiYSI6IjI2ZjYxZTgzNjNjZmQ0NGIxMGEzNDQxOTZjZDEzYTE0In0.n5Wmp0u1iTNMHHU6q0_eRg';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/light-v10',
-center: [-122, 36.6]
-});
-</script>
+    <script>
+        mapboxgl.accessToken =
+            'pk.eyJ1Ijoid3lhdHRwIiwiYSI6IjI2ZjYxZTgzNjNjZmQ0NGIxMGEzNDQxOTZjZDEzYTE0In0.n5Wmp0u1iTNMHHU6q0_eRg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [-122, 36.6]
+        });
+    </script>
 </body>
-
 <style>
     body {
+        margin: 0;
+        padding: 0;
         padding-top: constant(safe-area-inset-top);
         /* iOS 11.0 */
         padding-top: env(safe-area-inset-top);
         /* iOS 11.2 */
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
     }
 </style>
 
