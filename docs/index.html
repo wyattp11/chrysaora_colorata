@@ -1,4 +1,34 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><meta http-equiv=Content-Security-Policy content="worker-src blob: ; child-src blob: ; img-src 'self' data: blob: ; connect-src ws://localhost:8080 http://jsonplaceholder.typicode.com/ https://*.tiles.mapbox.com https://api.mapbox.com 'self'"><title>trip</title><script src=https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js></script><link href=https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css rel=stylesheet><link href=static/css/app.33298a845f0fb6eec30510c14bb06f6b.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=static/js/manifest.37a2ecbb1d1b7e6c9ada.js></script><script type=text/javascript src=static/js/vendor.96f11ccfb752ead6ee57.js></script><script type=text/javascript src=static/js/app.7d6b36ea019765486387.js></script></body><style>body {
-    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
-   }</style></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta http-equiv=Content-Security-Policy
+        content="worker-src blob: ; child-src blob: ; img-src 'self' data: blob: ; connect-src ws://localhost:8080 http://jsonplaceholder.typicode.com/ https://*.tiles.mapbox.com https://api.mapbox.com 'self'">
+    <title>trip</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+<body>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoid3lhdHRwIiwiYSI6IjI2ZjYxZTgzNjNjZmQ0NGIxMGEzNDQxOTZjZDEzYTE0In0.n5Wmp0u1iTNMHHU6q0_eRg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v9'
+});
+</script>
+</body>
+
+<style>
+    body {
+        padding-top: constant(safe-area-inset-top);
+        /* iOS 11.0 */
+        padding-top: env(safe-area-inset-top);
+        /* iOS 11.2 */
+    }
+</style>
+
+</html>
