@@ -50,8 +50,8 @@
                         // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
                         data: 'JW.geojson',
                         cluster: true,
-                        clusterMaxZoom: 14, // Max zoom to cluster points on
-                        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+                        clusterMaxZoom: 10, // Max zoom to cluster points on
+                        clusterRadius: 100 // Radius of each cluster when clustering points (defaults to 50)
                     });
 
                     map.addLayer({
@@ -76,9 +76,9 @@
                                 'step',
                                 ['get', 'point_count'],
                                 20,
-                                100,
+                                10,
                                 30,
-                                750,
+                                100,
                                 40
                             ]
                         }
@@ -145,7 +145,7 @@
 
                             new mapboxgl.Popup()
                                 .setLngLat(coordinates)
-                                .setHTML('<div style="max-width: 300px; height: 200px"><a href="' + e.features[0].properties.url + '">'+ e.features[0].properties.place_guess +'</a>  <img style="width: 80%;" src = '+ e.features[0].properties.image_url +' ></div>')
+                                .setHTML('<div style="max-width: 300px; height: 200px"><a href="' + e.features[0].properties.url + '">'+ e.features[0].properties.place_guess +'</a>  <img style="max-width: 90%; max-height: 90%;" src = '+ e.features[0].properties.image_url +' ><div><a>'+ e.features[0].properties.license +'</a> <a> '+ e.features[0].properties.user_login +'</a></div></div>')
                                 .addTo(map)
                                 });
 
